@@ -1,0 +1,24 @@
+{
+  "name": "PWA-Polymer",
+  "version": "1.0.0",
+  "description": "PWA using Polymer",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Artem Gusev <gusev2014russia@mail.ru> (CreativeRusBear)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CreativeRusBear/PWA-Polymer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CreativeRusBear/PWA-Polymer/issues"
+  },
+  "homepage": "https://github.com/CreativeRusBear/PWA-Polymer#readme",
+  "devDependencies": {
+    "@granite-elements/granite-bootstrap": "^4.1.1-1",
+    "@polymer/polymer": "^3.3.0",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "eslint": "^6.1.0",
+    "eslint-config-google": "^0.13.0"
+  }
+}
