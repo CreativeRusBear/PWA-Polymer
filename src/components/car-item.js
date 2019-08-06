@@ -1,7 +1,7 @@
 import {PolymerElement, html} from '@polymer/polymer/polymer-element';
 
 // eslint-disable-next-line require-jsdoc
-class carList extends PolymerElement {
+class carItem extends PolymerElement {
   // eslint-disable-next-line require-jsdoc
   static get template() {
     return html`
@@ -13,10 +13,13 @@ class carList extends PolymerElement {
             border-radius: 10px;
             min-height: 50px;
         }
+        h2 {
+            color: red
+        }
       </style>
       
       <div class="car">
-        <h2>[[model]]</h2>
+        <h2>[[name]]</h2>
         <p>[[description]]</p>
       </div>   
     `;
@@ -24,7 +27,7 @@ class carList extends PolymerElement {
 
   static get properties() {
     return {
-      model: {
+      name: {
         type: String,
       },
       description: {
@@ -46,4 +49,4 @@ class carList extends PolymerElement {
   // }
 }
 
-customElements.define('car-list', carList);
+customElements.define('car-item', carItem);
