@@ -21,6 +21,7 @@ class carsList extends PolymerElement {
                 <car-item name="[[car.name]]" description=[[car.description]]"></car-item>
               </template>
             </div>
+            <div>Number of cars in list: [[count]]</div>
           </div>          
         </div>
       </div>
@@ -34,6 +35,10 @@ class carsList extends PolymerElement {
       },
       filterText: {
         type: String,
+      },
+      count: {
+        type: String,
+        computed: '_getCurrentCount(cars, filterText)',
       },
     };
   }
@@ -71,6 +76,11 @@ class carsList extends PolymerElement {
 
   _carFilter(item) {
     return item.name.match(new RegExp(this.filterText, 'i'));
+  }
+
+  _getCurrentCount(cars, filterText) {
+    return cars.filter((item) =>
+      item.name.match(new RegExp(filterText, 'i'))).length;
   }
 }
 
