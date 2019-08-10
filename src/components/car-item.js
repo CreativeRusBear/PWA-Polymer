@@ -21,6 +21,8 @@ class carItem extends PolymerElement {
       <div class="car">
         <h2>[[name]]</h2>
         <p>[[description]]</p>
+        <p>Страна: [[country]]</p>
+        <p>Макс. скрость: [[speed]] km/h</p>
       </div>   
     `;
   }
@@ -33,20 +35,14 @@ class carItem extends PolymerElement {
       description: {
         type: String,
       },
+      speed: {
+        type: Number,
+      },
+      country: {
+        type: String,
+      },
     };
   }
-
-  // eslint-disable-next-line require-jsdoc
-  // connectedCallback() {
-  //   super.connectedCallback;
-  //   console.log('my-element created!');
-  // }
-  //
-  // // eslint-disable-next-line require-jsdoc
-  // ready() {
-  //   super.ready();
-  //   console.log('my element is ready!');
-  // }
 }
 
 customElements.define('car-item', carItem);
