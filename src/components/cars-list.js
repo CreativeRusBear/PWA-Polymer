@@ -11,14 +11,44 @@ class carsList extends PolymerElement {
          <div class="row">
           <div class="col-md-3">
             <div class="form-group">
+            
               <label for="search">Search</label>
-              <input type="text" class="form-control" id="search"  placeholder="Enter search" on-input="_inputChange">
+              <input 
+              type="text" 
+              class="form-control" 
+              id="search"  
+              placeholder="Enter search" 
+              on-input="_inputChange">
+              
+              <label for="sort">Sort by</label>
+              <select id="sort" class="form-control" on-change="_sortingChange">
+                <template is="dom-repeat" items="[[criteria]]">
+                    <option value="[[item.name]]">[[item.label]]</option>
+                </template>
+              </select>
+              
+              <label for="descending">Descending sort</label>
+              <input 
+              type="checkbox" 
+              on-change="_descendingChange" 
+              id="descending">
             </div>
           </div>
           <div class="col-md-9">
             <div class="cars">
-              <template id="carList" is="dom-repeat" items="[[cars]]" as="car" filter="_carFilter" sort="_carsSorter">
-                <car-item name="[[car.name]]" description=[[car.description]]" country="[[car.country]]" speed="[[car.speed]]"></car-item>
+              <template 
+              id="carList" 
+              is="dom-repeat" 
+              items="[[cars]]"
+              as="car" 
+              filter="_carFilter"
+              sort="_carsSorter">
+                <car-item 
+                  name="[[car.name]]" 
+                  description=[[car.description]]" 
+                  country="[[car.country]]" 
+                  speed="[[car.speed]]">
+                </car-item>
               </template>
             </div>
             <div>Number of cars in list: [[count]]</div>
@@ -40,11 +70,25 @@ class carsList extends PolymerElement {
         type: String,
         computed: '_getCurrentCount(cars, filterText)',
       },
+      criterium: {
+        type: String,
+      },
+      descendingSort: {
+        type: Boolean,
+      },
     };
   }
 
   constructor() {
     super();
+
+    this.criteria = [
+      {name: 'name', label: 'Alphabetical'},
+      {name: 'speed', label: 'Max speed'},
+    ];
+
+    this.criterium = this.criteria[0].name;
+
     this.cars = [
       {
         name: 'Mitsubishi 3000GT',
@@ -88,7 +132,22 @@ class carsList extends PolymerElement {
   }
 
   _carsSorter(fisrtCar, secondCar) {
-    return (fisrtCar.speed === secondCar.speed) ? 0 : fisrtCar.speed - secondCar.speed;
+    const invert = (this.descedingSort) ? -1 : 1;
+    return (fisrtCar[this.criterium] === secondCar[this.criterium])
+        ? 0
+        : ((fisrtCar[this.criterium] > secondCar[this.criterium])
+            ? 1 * invert
+            : -1 * invert);
+  }
+
+  _sortingChange() {
+    this.criterium = this.$.sort.selectedOptions[0].value;
+    this.$.carList.render();
+  }
+
+  _descendingChange() {
+    this.descedingSort = this.$.descending.checked;
+    this.$.carList.render();
   }
 }
 
