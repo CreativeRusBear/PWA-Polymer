@@ -25,7 +25,9 @@ class carItem extends PolymerElement {
       
       <div class="car clearfix" id="[[id]]">
         <img src="[[img]]" alt="[[name]]" class="float-right el-img">
-        <h2 class="el-name">[[name]]</h2>
+        <a href="#/car/[[id]]">
+            <h2 class="el-name">[[name]]</h2>        
+        </a>
         <p class="el-description">[[description]]</p>
         <p class="float-right el-country">Country: [[country]]</p>
         <p class="float-right el-max-speed">Max. speed: [[speed]] km/h</p>
