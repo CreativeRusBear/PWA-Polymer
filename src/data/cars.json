@@ -24,8 +24,8 @@
     "image": "./img/Toyota-Mark-2.png"
   },
   {
-    "id": "Toyota Crown",
-    "name": "ToyotaCrown",
+    "id": "ToyotaCrown",
+    "name": "Toyota Crown",
     "description": "Toyota Crown - a car manufactured by Toyota, which turned this model into a line of full-size luxury sedans. Originally sold in Japan and some other Asian countries, it was originally developed for use as a taxi. So it was in recent years of sales in the United States, where the car was sold from the late 1950s to 1971. Crown is the oldest sedan still manufactured by Toyota. In terms of social status, it competes only with Toyota Century, Toyota Celsior and Toyota Crown Majesta. Crown is used by many Japanese organizations as a limousine company.",
     "speed": 180,
     "country": "Japan",

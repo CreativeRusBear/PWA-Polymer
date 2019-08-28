@@ -1,40 +1,64 @@
 import {PolymerElement, html} from '@polymer/polymer/polymer-element';
 import '@granite-elements/granite-bootstrap/granite-bootstrap.js';
 
-// eslint-disable-next-line require-jsdoc
+/**
+ * @extends PolymerElement
+ */
 class carItem extends PolymerElement {
-  // eslint-disable-next-line require-jsdoc
+  /**
+   *
+   * @return {HTMLTemplateElement}
+   */
   static get template() {
     return html`
     <style include="granite-bootstrap"></style>
       <style>
-        .car {
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid black;
-            border-radius: 10px;
-            min-height: 150px;
+        section {
+            text-align: center;
+            margin: 10vh 0;
         }
-        .el-img {
-            max-height: 100px;
+        img{
+            width: 50%;
+            margin: 20px 0;
         }
-        .el-country, .el-max-speed{
-            clear: both;
+        p{
+            margin: 0;
+            width: 100%;
+        }
+        a, a:hover{
+            color: #495057;
+            text-decoration: none;
         }
       </style>
-      
-      <div class="car clearfix" id="[[id]]">
-        <img src="[[img]]" alt="[[name]]" class="float-right el-img">
-        <a href="#/car/[[id]]">
-            <h2 class="el-name">[[name]]</h2>        
-        </a>
-        <p class="el-description">[[description]]</p>
-        <p class="float-right el-country">Country: [[country]]</p>
-        <p class="float-right el-max-speed">Max. speed: [[speed]] km/h</p>
-      </div>   
+        <section 
+        class="d-flex justify-content-center align-items-center flex-wrap">
+            <a href="#/car/[[id]]">
+              <h2 class="el-name">
+                [[name]]
+              </h2>        
+            </a>
+                <p class="el-description">
+                    [[description]]
+                </p>
+                <img src="[[img]]" alt="[[name]]">
+                <p class="float-right el-country">
+                    Country: [[country]]
+                </p>
+                <p class="float-right el-max-speed">
+                    Max. speed: [[speed]] km/h
+                </p>
+        </section>
     `;
   }
 
+  /**
+   *
+   * @return {{country: {type: *},
+   * img: {type: *}, name: {type: *},
+   * description: {type: *},
+   * id: {type: *},
+   * speed: {type: *}}}
+   */
   static get properties() {
     return {
       id: {

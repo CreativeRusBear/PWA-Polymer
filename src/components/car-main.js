@@ -5,7 +5,14 @@ import '@polymer/polymer/lib/elements/dom-if';
 import '@granite-elements/granite-bootstrap/granite-bootstrap';
 import './cars-list';
 
+/**
+ * @extends PolymerElement
+ */
 class CarMain extends PolymerElement {
+  /**
+   *
+   * @returns {HTMLTemplateElement}
+   */
   static get template() {
     return html`
       <style unclude="granite-bootstrap"></style>
@@ -29,12 +36,20 @@ class CarMain extends PolymerElement {
       </template>
       <template is="dom-if" if="{{carIdActive}}">
         <div class="container">
-            <div class="alert alert-success" role="alert">You have selected car: {{carId.id}}</div>
+            <div class="alert alert-success" role="alert">
+                You have selected car: {{carId.id}}
+            </div>
         </div>
       </template>
     `;
   }
 
+  /**
+   *
+   * @return {{carIdActive: {type: *},
+   * route: {type: *}, carsListActive: {type: *},
+   * carId: {type: *}}}
+   */
   static get properties() {
     return {
       carsListActive: {
