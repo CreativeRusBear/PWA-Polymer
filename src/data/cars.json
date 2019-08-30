@@ -5,7 +5,7 @@
     "description": "Mitsubishi 3000GT is a GT class sports car of the Japanese company Mitsubishi Motors. Produced from 1990 to 2000. In the domestic market, Japan was known as the Mitsubishi GTO. For North America, the car was completed by Chrysler Corporation and was named Dodge Stealth.",
     "speed": 250,
     "country": "Japan",
-    "image": "./img/Mitsubishi-3000GT.png"
+    "image": "./src/img/Mitsubishi-3000GT.png"
   },
   {
     "id": "ToyotaCorollaAE86",
@@ -13,7 +13,7 @@
     "description": "Toyota AE86, also known as Toyota Corolla Levin and Toyota Sprinter Trueno, is a lightweight hatchback or coupe car manufactured from 1983 to 1987 by Toyota. For brevity, the chassis code “AE86” stands for the 1600 cc rear-wheel drive model.",
     "speed": 180,
     "country": "Japan",
-    "image": "./img/toyota-ae86.png"
+    "image": "./src/img/toyota-ae86.png"
   },
   {
     "id": "ToyotaMarkII",
@@ -21,7 +21,7 @@
     "description": "Toyota Mark II is a mid-size sedan manufactured by Toyota from 1968 to 2004. The Mark II name has been used by Toyota for several decades and was originally used as part of the Toyota Corona Mark II name. Mark II was introduced to stand out from the main Toyota Corona platform. As soon as the platform was split in the 1970s, the car became known simply as the Mark II.",
     "speed": 240,
     "country": "Japan",
-    "image": "./img/Toyota-Mark-2.png"
+    "image": "./src/img/Toyota-Mark-2.png"
   },
   {
     "id": "ToyotaCrown",
@@ -29,6 +29,6 @@
     "description": "Toyota Crown - a car manufactured by Toyota, which turned this model into a line of full-size luxury sedans. Originally sold in Japan and some other Asian countries, it was originally developed for use as a taxi. So it was in recent years of sales in the United States, where the car was sold from the late 1950s to 1971. Crown is the oldest sedan still manufactured by Toyota. In terms of social status, it competes only with Toyota Century, Toyota Celsior and Toyota Crown Majesta. Crown is used by many Japanese organizations as a limousine company.",
     "speed": 180,
     "country": "Japan",
-    "image": "./img/Toyota-Crown.png"
+    "image": "./src/img/Toyota-Crown.png"
   }
 ]

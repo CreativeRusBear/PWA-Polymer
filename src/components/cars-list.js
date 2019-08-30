@@ -123,7 +123,7 @@ class CarsList extends PolymerElement {
    */
   async _getData() {
     try {
-      const res = await fetch('./data/cars.json');
+      const res = await fetch('./src/data/cars.json');
       this.cars = await res.json();
     } catch (e) {
       throw new Error(e);

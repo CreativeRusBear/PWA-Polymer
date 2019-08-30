@@ -28,7 +28,6 @@ class CarDetail extends PolymerElement {
    * @return {HTMLTemplateElement}
    */
   static get template() {
-    debugger;
     return html`
       <style include="granite-bootstrap">
         section {
@@ -78,7 +77,7 @@ class CarDetail extends PolymerElement {
    * @private
    */
   async _onIdChange() {
-    const url = `./data/cars.json`;
+    const url = `./src/data/cars.json`;
     try {
       const res = await fetch(url);
       const cars = await res.json();
