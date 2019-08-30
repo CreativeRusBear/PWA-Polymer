@@ -2,6 +2,7 @@
 
 ## Description
 This is single page application, which is a magazine describing the characteristics of some machines
+
 ![screenshot](https://user-images.githubusercontent.com/37180024/64016495-d3deb480-cb2f-11e9-888c-839ac540536d.png)
 
 ## Instructions
