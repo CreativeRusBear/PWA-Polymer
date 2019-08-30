@@ -2,6 +2,7 @@ import {PolymerElement, html} from '@polymer/polymer/polymer-element';
 import '@granite-elements/granite-bootstrap/granite-bootstrap.js';
 
 /**
+ * @customElement
  * @extends PolymerElement
  */
 class carItem extends PolymerElement {

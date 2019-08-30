@@ -4,7 +4,7 @@ import '@polymer/app-route/app-location';
 import '@polymer/polymer/lib/elements/dom-if';
 import '@granite-elements/granite-bootstrap/granite-bootstrap';
 import './cars-list';
-
+import './car-detail';
 /**
  * @extends PolymerElement
  */
@@ -36,9 +36,7 @@ class CarMain extends PolymerElement {
       </template>
       <template is="dom-if" if="{{carIdActive}}">
         <div class="container">
-            <div class="alert alert-success" role="alert">
-                You have selected car: {{carId.id}}
-            </div>
+           <car-detail id="[[carId.id]]"></car-detail>
         </div>
       </template>
     `;
@@ -67,6 +65,9 @@ class CarMain extends PolymerElement {
     };
   }
 
+  /**
+   * @connectedCallback
+   */
   connectedCallback() {
     super.connectedCallback();
 
