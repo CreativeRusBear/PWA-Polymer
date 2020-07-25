@@ -1,27 +1,36 @@
 {
   "name": "PWA-Polymer",
   "version": "1.0.0",
-  "description": "PWA using Polymer",
+  "description": "SPA created by using Polymer library",
   "main": "index.js",
-  "keywords": [],
-  "author": "Artem Gusev <gusev2014russia@mail.ru> (CreativeRusBear)",
+  "keywords": [
+    "web-components",
+    "polymer",
+    "javascript",
+    "spa",
+    "cars"
+  ],
+  "scripts": {
+    "start": "polymer serve --open"
+  },
+  "author": "Artem Gusev (corocoto) <gusev2014russia@mail.ru>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CreativeRusBear/PWA-Polymer.git"
+    "url": "git+https://github.com/corocoto/SPA-Car-Magazine.git"
   },
   "bugs": {
-    "url": "https://github.com/CreativeRusBear/PWA-Polymer/issues"
+    "url": "https://github.com/corocoto/SPA-Car-Magazine/issues"
   },
-  "homepage": "https://github.com/CreativeRusBear/PWA-Polymer#readme",
+  "homepage": "https://github.com/corocoto/SPA-Car-Magazine#readme",
   "devDependencies": {
-    "@granite-elements/granite-bootstrap": "^4.1.1-1",
-    "@polymer/polymer": "^3.3.0",
-    "@webcomponents/webcomponentsjs": "^2.0.0",
-    "eslint": "^6.1.0",
+    "eslint": "^6.8.0",
     "eslint-config-google": "^0.13.0"
   },
   "dependencies": {
+    "@granite-elements/granite-bootstrap": "^4.1.1-1",
+    "@polymer/polymer": "^3.4.1",
+    "@webcomponents/webcomponentsjs": "^2.4.4",
     "@polymer/app-route": "^3.0.2"
   }
 }
