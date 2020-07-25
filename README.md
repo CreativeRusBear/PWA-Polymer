@@ -1,8 +1,6 @@
 # SPA Cars Magazine :oncoming_automobile: (using Polymer library)
 ![GitHub repo size](https://img.shields.io/github/repo-size/CreativeRusBear/SPA-Car-Magazine)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/CreativeRusBear/SPA-Car-Magazine)
-![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/CreativeRusBear/SPA-Car-Magazine/dev/eslint)
-![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/CreativeRusBear/SPA-Car-Magazine/dev/@polymer/polymer)
 ![GitHub top language](https://img.shields.io/github/languages/top/CreativeRusBear/SPA-Car-Magazine)
 ## Description
 This is single page application, which is a magazine describing the characteristics of some machines
